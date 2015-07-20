@@ -1,0 +1,11 @@
+<h4> Which film was filmed in <%= @quiz_year %> ?</h4><br>
+<p> 
+	<% @poster.each do |the_film| %> 
+		<% if the_film[:year] == @quiz_year %>
+				<img class="poster" src="<%= the_film[:poster] %>" onclick="alert('Yayyyy¡¡¡')"> 
+		<% else %>
+				<img class="poster" src="<%= the_film[:poster] %>" onclick="alert('Nop, try again :( ')"> 
+		<% end %>
+				
+	<% end %>
+</p>
